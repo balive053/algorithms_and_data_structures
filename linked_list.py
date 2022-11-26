@@ -194,7 +194,43 @@ class linked_list:
                 break
             node_index += 1
 
+            
+    def swap_nodes(self, key1, key2):
+        """
+        Swap data values of two nodes.
 
+        input: (int) key1 
+               index of node 1 to swap
+               (int) key2 
+               index of node 2 to swap
+        output: None
+        """
+        
+        # special case, keys match
+        if key1 == key2:
+            return
+
+        counter = 0
+        curr_node1, curr_node2 = None, None
+        
+        current_node = self.head_node
+        while current_node.next!= None:
+            # find the nodes at the index to be switched 
+            current_node = current_node.next
+            if counter == key1:
+                curr_node1 = current_node
+            if counter == key2:
+                curr_node2 = current_node
+            counter += 1
+
+        # error handling
+        if curr_node1 == None or curr_node2 == None:
+            print("ERROR: Node not found. Nodes unable to be swapped.")
+            return None
+
+        # switch node data    
+        curr_node1.data_val, curr_node2.data_val = curr_node2.data_val, curr_node1.data_val
+        return None    
 
 tester = linked_list()
 tester.append(5)
