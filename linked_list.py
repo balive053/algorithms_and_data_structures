@@ -44,7 +44,51 @@ class linked_list:
             current_node = current_node.next
         current_node.next = new_node
     
+    
+    def append_after(self, data, prior_node):
+        """
+        Append value to linked list after first instance of specific value.
+        If more than one instance is present, the first match in the list from the head will be used.
 
+        input : (Any) data - value to be appended
+                (Any) prior_node - value of node that data is to be appended after
+        output : None 
+        """
+        
+        current_node = self.head_node.next
+        while current_node.data_val != prior_node and current_node.next != None:
+            current_node = current_node.next
+        
+        # append after value if found, else do not append and display error message
+        if current_node.data_val == prior_node:
+            new_node = node(data)
+            placeholder = current_node.next
+            current_node.next = new_node
+            current_node = current_node.next
+            current_node.next = placeholder
+        else:
+            print(f'ERROR: value "{prior_node}" not found in linked list. Node was not added.')
+        return None
+
+    
+    def prepend(self, data):
+        """
+        Appends input data to the beginning of the linked list. 
+
+        input:  (Any) data
+                Data of any type to be appended to the linked list
+        output: None
+        """
+
+        # create new node to insert after head_node and placeholder for head_node.next
+        new_node = node(data)
+        placeholder = self.head_node.next
+        # append to front of linked list
+        new_node.next = placeholder
+        self.head_node.next = new_node
+        return None
+
+    
     def pop(self):
         """
         Removes last node from linked list. 
@@ -154,13 +198,15 @@ class linked_list:
 
 tester = linked_list()
 tester.append(5)
-tester.append(4)
 tester.append('bus station')
 tester.append(2)
-tester.append('pidgeon')
 tester.show_list()
 tester.pop()
 print(tester.length())
 print(tester.get('tree'))
 tester.remove(2)
+tester.append_after(35, 5)
+tester.append_after(57, 999)
+tester.show_list()
+
 tester.show_list()
