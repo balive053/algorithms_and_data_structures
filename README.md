@@ -13,5 +13,8 @@ Storage bay for default algorithms and data structures to use as a base in other
 &nbsp;&nbsp; get()<br>
 &nbsp;&nbsp; remove()<br>
 &nbsp;&nbsp; swap_nodes()<br>
+&nbsp;&nbsp; reverse_list()<br>
+&nbsp;&nbsp; remove_duplicates()<br>
+&nbsp;&nbsp; nth_value()<br>
 
 
