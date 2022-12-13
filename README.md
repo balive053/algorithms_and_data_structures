@@ -1,5 +1,5 @@
 # algorithms_and_data_structures
-Storage bay for default algorithms and data structures to use as a base in other models.
+Storage bay for default algorithms and data structures to use as a base in other tools.
 
 <b>Current contents:</b><br>
 <i>Linked List</i><br>
