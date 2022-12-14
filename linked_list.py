@@ -1,13 +1,13 @@
 """
 Class for implementing a Python linked list data structure. 
 Head value contains the 1st value in the list. 
-Uses 'node' class to add nodes to 'linked_list' class.
+Uses 'node' class to add nodes to 'LinkedList' class.
 Author : Blake Livermore 2022
 """
 
 class node:
     """
-    Creates nodes to store data in linked_list class
+    Creates nodes to store data in LinkedList class
     """
     
     def __init__(self, data_val):
@@ -15,7 +15,7 @@ class node:
         self.data_val = data_val
         self.next = None
     
-class linked_list:
+class LinkedList:
     """
     Creates a linked list which data can be appended to and removed from. 
     
