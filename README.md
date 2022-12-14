@@ -2,7 +2,7 @@
 Storage bay for default algorithms and data structures to use as a base in other tools.
 
 <b>Current contents:</b><br>
-<i>Linked List</i><br>
+<b><i>Linked List</i></b><br>
 &nbsp; functions:<br>
 &nbsp;&nbsp; append()<br>
 &nbsp;&nbsp; append_after()<br>
